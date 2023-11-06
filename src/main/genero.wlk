@@ -22,7 +22,7 @@ object anime inherits Genero{
 }
 
 object historia inherits Genero{
-	var basadaHechoReal = false
+	var basadaHechoReal = true
 	
 	override method adicionalSegunGenero(dificultad){
 		return (dificultad * 31.4) / 100
