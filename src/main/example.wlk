@@ -11,10 +11,9 @@ class SaladeEscape{
 	var nombre
 	var dificultad
 	const genero
-	var cantSustos
 	
 	method precio(){
-		return 10.000 + genero.adicionalSegunGenero(dificultad, cantSustos)
+		return 10000 + genero.adicionalSegunGenero(dificultad)
 	}
 	
 	method nombreSala(){
@@ -22,7 +21,7 @@ class SaladeEscape{
 	}
 	
 	method esSalaDificil(){
-		return genero.dificultadSegunGenero(cantSustos,dificultad)
+		return genero.dificultadSegunGenero(dificultad)
 	}
 
 }

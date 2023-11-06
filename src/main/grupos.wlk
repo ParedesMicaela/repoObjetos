@@ -31,6 +31,10 @@ class Grupo {
 	}
 	
 	method algunosPuedenPagar(sala){
-		return participantes.sum({participante=>participante.saldoDisponible()}) > sala.precio()
+		return self.participantesQuePuedenPagar(sala).sum({participante=>participante.saldoDisponible()}) > sala.precio()
+	}
+	
+	method participantesQuePuedenPagar(sala){
+		return participantes.filter({participante=>participante.puedePagar(sala,self.cantParticipantes())})
 	}
 }

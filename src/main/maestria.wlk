@@ -12,7 +12,7 @@ class Maestria {
 object amateur inherits Maestria{
 
 	override method puedeEscaparSegunMaestria(sala,escapista){
-		return !sala.esDificil() && escapista.hizoMuchasSalas()
+		return !sala.esSalaDificil() && escapista.hizoMuchasSalas()
 	}
 
 	override method subirNivelSegunMaestria(escapista){
